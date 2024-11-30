@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className={state.theme== "light" ? 'light' : 'dark'}>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <h1><span className='first-letter'>D</span>H Odonto</h1>
+      <h2><span className='first-letter'>D</span>H Odonto</h2>
       <div className='links-container'>
         <Link to="/">
           <h4>Home</h4>
