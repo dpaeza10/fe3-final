@@ -18,6 +18,11 @@ h1{
   padding: 0.5rem;
 }
 
+h2{
+  margin: 0;
+  padding: 10px;
+}
+
 footer {
   display: flex;
   justify-content: center;
