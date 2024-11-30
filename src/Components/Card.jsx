@@ -9,8 +9,21 @@ const Card = ({ name, username, id }) => {
     // Aqui iria la logica para agregar la Card en el localStorage
     const newFav = { name, username, id };
     let favs = JSON.parse(localStorage.getItem('favs')) || [];
-    const updatedFavs = [...favs, newFav];
-    localStorage.setItem('favs', JSON.stringify(updatedFavs));
+
+     // Verificar si el doctor ya está en los favoritos
+    const isFav = favs.some(fav => fav.id === id);
+    if (isFav) {
+      alert("Este doctor ya está en tus favoritos.");
+      return;
+    }
+
+    // Confirmar antes de agregar a favoritos
+    const confirmAdd = window.confirm("¿Estás seguro de agregar este doctor a tus favoritos?");
+    if (confirmAdd) {
+      const updatedFavs = [...favs, newFav];
+      localStorage.setItem('favs', JSON.stringify(updatedFavs));
+      alert("Doctor agregado a favoritos.");
+    }
   }
 
   return (

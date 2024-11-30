@@ -26,7 +26,7 @@ const Detail = () => {
   }, [id]);
 
   return (
-    <section className={ state.theme == "dark" && "dark"}>
+    <section className={state.theme == "dark" ? "dark" : undefined}>
       <h1>Detail Dentist id </h1>
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
