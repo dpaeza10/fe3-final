@@ -1,0 +1,54 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color: #000;
+}
+
+.first-letter{
+    color: Red;
+}
+
+.links-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    color: rgb(136, 136, 136);
+}
+
+.change-theme{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    height: 20px;
+}
+
+.light{
+    background-color: #fcf7fc;
+    color: #202428;
+}
+
+.dark{
+    background-color: #202428;
+    color: #fcf7fc;
+}
+
+nav.light a {
+    color: #202428;
+}
+
+nav.dark a {
+    color: #fcf7fc;
+}

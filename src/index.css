@@ -23,22 +23,6 @@ h1{
   text-align: center;
 }
 
-nav{
-  display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
-}
-
-a{
-  color: #000;
-  text-decoration: none;
-  margin: 5px;
-  cursor: pointer;
-}
-a:hover{
-  color: rgb(136, 136, 136);
-} 
 
 footer {
   display: flex;
@@ -113,10 +97,10 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
+/* .dark{
   background-color: #12121296;
   color: white;
 }
 .dark > a {
   color: white;
-}
+} */
