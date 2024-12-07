@@ -4,17 +4,23 @@ import { reducer } from "../Reducers/Reducer";
 
 const ContextGlobal = createContext();
 
+const localStorageFavs = JSON.parse(localStorage.getItem("favs")) || [];
+
 const initialState = {
   theme: "light", 
   docs: [], 
-  favs: []
+  favs: localStorageFavs
 };
 
-export const Context = ({ children }) => {
+const Context = ({ children }) => {
   const [ state, dispatch ] = useReducer(reducer, initialState);
 
   const url = "https://jsonplaceholder.typicode.com/users";
 
+  useEffect( () => {
+    localStorage.setItem("favs", JSON.stringify(state.favs));
+  }, [state.favs]);
+  
   useEffect(() => {
     axios.get(url)
       .then((res) => {

@@ -6,7 +6,6 @@ import { useContextGlobal } from '../Context/global.context';
 
 const Favs = () => {
   const { state } = useContextGlobal();
-  const favs = JSON.parse(localStorage.getItem('favs')) || [];
 
   return (
     <section className={state.theme === "dark" && "dark"}>
@@ -14,7 +13,7 @@ const Favs = () => {
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
-        {favs.map((fav) => (
+        {state.favs.map((fav) => (
           <Card key={fav.id} name={fav.name} username={fav.username} id={fav.id} />
         ))}
       </div>
