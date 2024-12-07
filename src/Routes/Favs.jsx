@@ -8,7 +8,7 @@ const Favs = () => {
   const { state } = useContextGlobal();
 
   return (
-    <section className={state.theme === "dark" && "dark"}>
+    <section className={state.theme == "dark" ? "dark" : undefined}>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}

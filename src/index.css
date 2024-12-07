@@ -38,9 +38,15 @@ footer > img{
   width: 200px;
   margin: 0;
 }
+
 footer > p{
   margin: 0;
   padding-top: 0.7rem;
+}
+
+footer.dark{
+  background-color: #515b64;
+  color: #fcf7fc;
 }
 
 form{
