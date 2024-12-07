@@ -8,7 +8,7 @@ import Context from './Context/global.context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
+    <BrowserRouter basename="/fe3-final">
       <Context>
         <App/>
       </Context>
